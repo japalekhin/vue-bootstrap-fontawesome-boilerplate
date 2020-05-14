@@ -1,22 +1,13 @@
-@import "@/assets/scss/_overrides.scss";
-
-@import "node_modules/bootstrap/scss/_functions.scss";
-@import "node_modules/bootstrap/scss/_mixins.scss";
-@import "node_modules/bootstrap/scss/_variables.scss";
+@import '@/assets/scss/overrides.scss';
+@import 'node_modules/bootstrap/scss/_functions.scss';
+@import 'node_modules/bootstrap/scss/_variables.scss';
+@import 'node_modules/bootstrap/scss/_mixins.scss';
 
 @mixin aspect-ratio($width, $height) {
-  position: relative;
   &:before {
     display: block;
-    content: "";
+    content: '';
     width: 100%;
     padding-top: ($height / $width) * 100%;
-  }
-  > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
   }
 }

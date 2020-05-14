@@ -1,16 +1,21 @@
-import Vue from 'vue';
-import App from '@/App';
+import Vue from "vue";
+import App from "./App.vue";
 
-import router from '@/helpers/router';
+import router from "./helpers/router";
+import store from "./helpers/store";
 
-import '@/helpers/bootstrap';
-import '@/helpers/fontawesome';
+import mixinTitle from "./mixins/title";
+import mixinAuthGuard from "./mixins/auth-guard";
+
+import "./helpers/axios";
+import "./helpers/bootstrap";
+import "./helpers/fontawesome";
 
 Vue.config.productionTip = false;
-
+Vue.mixin(mixinTitle);
+Vue.mixin(mixinAuthGuard);
 new Vue({
-  el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
-});
+  store,
+  render: h => h(App)
+}).$mount("#app");
