@@ -1,6 +1,6 @@
 # boilerplate
 
-> Image AI: Double Scale
+> Boilerplate description
 
 ## Build Setup
 
